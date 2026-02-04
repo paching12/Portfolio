@@ -9,7 +9,7 @@ const Header: FC<HeaderProps> = ({ options }) => {
     <header className={styles.header}>
       <img src={Logo} alt="Your SVG" className={styles.logo} />
       {/* Menu */}
-      <div>
+      <div className={styles.menu}>
         {options.map((item) => (
           <MenuItem item={item} />
         ))}
