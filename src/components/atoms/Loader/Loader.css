@@ -63,23 +63,28 @@
 
 .control.close {
   background-color: #e33;
+  user-select: none;
 }
 
 .control.minimize {
   background-color: #ee0;
+  user-select: none;
 }
 
 .control.maximize {
   background-color: #0b0;
+  user-select: none;
 }
 
 .terminal-title {
   float: left;
   line-height: 1.5em;
   color: #eee;
+  user-select: none;
 }
 
 .text {
+  user-select: none;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
