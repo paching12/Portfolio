@@ -32,7 +32,8 @@
       "@pages/*": ["./src/pages/*"],
       "@reducers/*": ["./src/reducers/*"],
       "@actions/*": ["./src/actions/*"],
-      "@shared/*": ["./src/shared/*"]
+      "@shared/*": ["./src/shared/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   },
   "include": ["src"]
