@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const AppLayout = () => {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="container">
       <Header
         options={[
           t("Header.heroe"),

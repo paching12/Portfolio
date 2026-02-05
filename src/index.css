@@ -4,6 +4,8 @@
   margin: none !important;
   padding: none;
   max-width: auto;
+  display: flex;
+  justify-content: center;
 }
 
 body {
