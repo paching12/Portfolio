@@ -5,8 +5,8 @@ import { MenuItem } from "../MenuItem";
 
 const Header: FC<HeaderProps> = ({ options }) => {
   return (
-    <header className="m-[25px] flex justify-between">
-      <img src={Logo} alt="Your SVG" className="w-[75px]" />
+    <header className="m-6.25 flex justify-between">
+      <img src={Logo} alt="Your SVG" className="w-18.75" />
       {/* Menu */}
       <div className="flex">
         {options.map((item) => (
