@@ -4,15 +4,10 @@ import { initReactI18next } from "react-i18next";
 import enTranslations from "./locales/en/translation";
 import esTranslations from "./locales/es/translation";
 import { languageNames } from "./locales/settings";
-// import frTranslations from "./locales/fr/translation";
 
 const resources = {
-  // English translations
   ...enTranslations,
-  // Spanish translations
   ...esTranslations,
-  // French translations
-  // ...frTranslations,
 };
 
 // Initialize i18next
