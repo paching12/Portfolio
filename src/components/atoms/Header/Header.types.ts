@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type HeaderProps = {
-  options: string[];
+  children: ReactNode;
 };

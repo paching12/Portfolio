@@ -1,19 +1,18 @@
 import { Footer } from "@components/atoms/Footer";
 import { Header } from "@components/atoms/Header";
-import { useTranslation } from "react-i18next";
+import { MenuItem } from "@components/atoms/MenuItem";
+import { HeaderOptions } from "../data/NavItems";
 
 const AppLayout = () => {
-  const { t } = useTranslation();
   return (
     <div className="container">
-      <Header
-        options={[
-          t("Header.heroe"),
-          t("Header.experience"),
-          t("Header.skills"),
-          t("Header.aboutMe"),
-        ]}
-      />
+      <Header>
+        <div className="flex">
+          {HeaderOptions.map((item) => (
+            <MenuItem item={item.i18nKey} />
+          ))}
+        </div>
+      </Header>
 
       <Footer />
     </div>

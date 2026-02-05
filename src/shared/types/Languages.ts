@@ -12,4 +12,4 @@ export const LANGUAGES = {
   EN: languageNames.english, // alias
 } as const;
 
-export type LANGUAGES = (typeof LANGUAGES)[keyof typeof LANGUAGES];
+export type LANGUAGE_TYPES = (typeof LANGUAGES)[keyof typeof LANGUAGES];

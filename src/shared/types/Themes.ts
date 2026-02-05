@@ -3,4 +3,4 @@ export const THEMES = {
   LIGHT: 2,
 } as const;
 
-export type THEMES = (typeof THEMES)[keyof typeof THEMES];
+export type THEME_TYPE = (typeof THEMES)[keyof typeof THEMES];

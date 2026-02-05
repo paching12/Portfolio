@@ -33,7 +33,8 @@
       "@reducers/*": ["./src/reducers/*"],
       "@actions/*": ["./src/actions/*"],
       "@shared/*": ["./src/shared/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"]
