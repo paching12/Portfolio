@@ -2,7 +2,7 @@ import type { FC } from "react";
 import type { MenuItemProps } from "./MenuItem.types";
 
 const MenuItem: FC<MenuItemProps> = ({ item }) => {
-  return <li>{item}</li>;
+  return <li className="flex-1 list-none pl-[20px] break-keep">{item}</li>;
 };
 
 export default MenuItem;
