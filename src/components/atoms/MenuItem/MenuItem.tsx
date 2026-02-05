@@ -3,7 +3,7 @@ import type { MenuItemProps } from "./MenuItem.types";
 
 const MenuItem: FC<MenuItemProps> = ({ item }) => {
   return (
-    <li className="flex-1 list-none content-center justify-center p-2 whitespace-nowrap">
+    <li className="flex-1 cursor-pointer list-none content-center justify-center p-2 whitespace-nowrap select-none">
       {item}
     </li>
   );

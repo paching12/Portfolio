@@ -7,4 +7,6 @@ export const languageNames = {
   espanolMx: "es-mx",
   espanol: "es",
   portugese: "pt-br",
-};
+} as const;
+
+export type LANGUAGES = (typeof languageNames)[keyof typeof languageNames];
