@@ -1,17 +1,8 @@
-import { createContext, useState, type FC } from "react";
-import type {
-  InitContextProviderType,
-  InitContextTypeValues,
-} from "./IniContext.types";
+import { useState, type FC } from "react";
+import type { InitContextProviderType } from "./IniContext.types";
 import { THEMES } from "@shared/types/Themes";
 import { LANGUAGES } from "@shared/types/Languages";
-
-const InitContext = createContext<InitContextTypeValues>({
-  theme: THEMES.DARK,
-  language: LANGUAGES.EN,
-  setTheme: (theme: THEMES) => {},
-  setLanguage: (language: LANGUAGES) => {},
-});
+import { InitContext } from "./InitContext";
 
 export const InitContextProvider: FC<InitContextProviderType> = ({
   children,
