@@ -1,5 +1,5 @@
 import { Footer } from "@components/atoms/Footer";
-import { Header } from "@components/atoms/Header";
+import { Header } from "@components/molecules/Header";
 import Nav from "@components/atoms/Nav/Nav";
 import { HeaderOptions } from "../data/NavItems";
 
