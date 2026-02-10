@@ -5,9 +5,10 @@ import { createContext } from "react";
 
 export const InitContext = createContext<InitContextTypeValues>({
   theme: THEMES.DARK,
-  language: LANGUAGES.EN,
+  language: LANGUAGES.en,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   setTheme: (_: THEME_TYPE) => {},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   setLanguage: (_: LANGUAGE_TYPES) => {},
+  availableLanguages: [] as LANGUAGE_TYPES[],
 });

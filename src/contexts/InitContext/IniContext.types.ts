@@ -6,6 +6,7 @@ export type InitContextTypeValues = {
   language: LANGUAGE_TYPES;
   setTheme: (theme: THEME_TYPE) => void;
   setLanguage: (language: LANGUAGE_TYPES) => void;
+  availableLanguages: LANGUAGE_TYPES[];
 };
 
 export type InitContextProviderType = {
