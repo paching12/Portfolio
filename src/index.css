@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 #root {
@@ -10,4 +11,37 @@
 
 body {
   margin: 0 !important;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-background);
+}
+
+@theme {
+  --color-primary: #02f2ff;
+  --color-secondary: #f5f5f5;
+  --color-accent: #733ff3;
+  --color-dark-base: #0b0e14;
+
+  --color-secondary-details: #523c8f; /*Purple timeline*/
+  --color-button-primary: #3e90a5;
+  --color-button-primary-hover: #49b2c8;
+
+  /* Text */
+  --color-text: #cad3d2;
+  --color-text-muted: #8a8d91;
+  --color-text-soft: #5c6670;
+  --color-text-inverted: #03060d;
+
+  /* Whites / utility */
+  --color-foreground: #ffffff;
+
+  /* Backgrounds */
+  --color-background: #03060d;
+  --color-background-soft: #060b18;
+
+  /* Surfaces / cards */
+  --color-surface: #111d31;
+  --color-surface-elevated: #1b2b3b;
+  --color-border-subtle: #233648;
+
+  --shadow-neon: 0 0 15px rgba(2, 242, 255, 0.4);
 }
