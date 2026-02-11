@@ -32,10 +32,7 @@ export const InitContextProvider: FC<InitContextProviderType> = ({
   };
 
   useEffect(() => {
-    dispatch({
-      type: ActionPayloadTypes.SET_LANGUAGE,
-      payload: normalizeLanguage(selectedLanguagei18n),
-    });
+    setCurrentLanguage(selectedLanguagei18n as LANGUAGE_TYPES);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
