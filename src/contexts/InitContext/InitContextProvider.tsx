@@ -9,7 +9,6 @@ import {
 } from "@reducers/languageReducer/languageReducer";
 import { ActionPayloadTypes } from "@actions/languages";
 import { type LANGUAGE_TYPES } from "@shared/types/Languages";
-import { normalizeLanguage } from "@utils/locales/LanguagesHelpers";
 export const InitContextProvider: FC<InitContextProviderType> = ({
   children,
 }) => {
