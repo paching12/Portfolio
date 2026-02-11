@@ -1,0 +1,6 @@
+@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
+
+.menuItem {
+  @apply flex-1 cursor-pointer list-none content-center justify-center p-2 whitespace-nowrap select-none;
+  color: var(--color-text-muted);
+}

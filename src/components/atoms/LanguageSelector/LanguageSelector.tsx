@@ -2,6 +2,7 @@ import { useInitContext } from "@contexts/InitContext/useInitContext";
 import type { LANGUAGE_TYPES } from "@shared/types/Languages";
 import classNames from "classnames";
 import { useState } from "react";
+import { Button } from "../Button";
 
 const LanguageSelector = () => {
   const {
@@ -23,9 +24,7 @@ const LanguageSelector = () => {
   return (
     <li className="flex-1 list-none content-center justify-center p-2 select-none">
       <div className="relative">
-        <button className="cursor-pointer" onClick={showLanguageOptionsHandler}>
-          {currentLanguage}
-        </button>
+        <Button onClick={showLanguageOptionsHandler}>{currentLanguage}</Button>
         <ul
           className={classNames(
             {
@@ -36,7 +35,7 @@ const LanguageSelector = () => {
         >
           {availableLanguages.map((item: LANGUAGE_TYPES, index: number) => (
             <li
-              className="cursor-pointer"
+              className="cursor-pointer text-white"
               key={`LanguageItem-${index}`}
               onClick={() => selectLanguageHandler(item)}
             >
