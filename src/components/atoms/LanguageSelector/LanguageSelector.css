@@ -4,3 +4,7 @@
   @apply flex cursor-pointer justify-center;
   color: var(--color-foreground);
 }
+
+.language-container {
+  @apply flex-1 list-none content-center justify-center p-2 select-none;
+}

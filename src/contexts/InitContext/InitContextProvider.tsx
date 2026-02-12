@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState, type FC } from "react";
+import { useEffect, useMemo, useReducer, useState, type FC } from "react";
 import type { InitContextProviderType } from "./IniContext.types";
 import { InitContext } from "./InitContext";
 import { THEMES, type THEME_TYPE } from "@shared/types/Themes";
@@ -9,6 +9,8 @@ import {
 } from "@reducers/languageReducer/languageReducer";
 import { ActionPayloadTypes } from "@actions/languages";
 import { type LANGUAGE_TYPES } from "@shared/types/Languages";
+import { getNewLanguageList } from "@utils/locales/LanguagesHelpers";
+import { languageNames } from "@utils/locales/settings";
 export const InitContextProvider: FC<InitContextProviderType> = ({
   children,
 }) => {
@@ -16,9 +18,13 @@ export const InitContextProvider: FC<InitContextProviderType> = ({
   const { i18n } = useTranslation(); // not passing any namespace will use the defaultNS (by default set to 'translation')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedLanguagei18n] = i18n.language.split("-");
-  const [{ currentLanguage, availableLanguages }, dispatch] = useReducer(
+  const [{ currentLanguage }, dispatch] = useReducer(
     LanguageReducer,
     initialState,
+  );
+  const availableLanguages = useMemo(
+    () => getNewLanguageList(languageNames, currentLanguage),
+    [currentLanguage],
   );
 
   const setCurrentLanguage = (currentLanguage: LANGUAGE_TYPES) => {

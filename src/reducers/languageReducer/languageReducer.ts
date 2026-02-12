@@ -4,12 +4,9 @@ import {
   ActionPayloadTypes,
   type ActionLanguageReducer,
 } from "@actions/languages";
-import { getNewLanguageList } from "@utils/locales/LanguagesHelpers";
-import { languageNames } from "@utils/locales/settings";
 
 export const initialState = {
   currentLanguage: LANGUAGES.en,
-  availableLanguages: [LANGUAGES.en, LANGUAGES.es],
 };
 
 export const LanguageReducer = (
@@ -18,10 +15,12 @@ export const LanguageReducer = (
 ) => {
   switch (action.type) {
     case ActionPayloadTypes.SET_LANGUAGE:
+      if (action.payload === state.currentLanguage) {
+        return state;
+      }
       return {
         ...state,
         currentLanguage: action.payload,
-        availableLanguages: getNewLanguageList(languageNames, action.payload),
       };
     default:
       throw new Error("Unknown action type sent on LanguageReducer");
