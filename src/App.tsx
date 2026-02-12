@@ -1,15 +1,12 @@
-import { useState } from "react";
 import "./App.css";
-// import LoaderScreen from "@pages/LoaderScreen/LoaderScreen";
 import AppLayout from "./layouts/AppLayout";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
       <AppLayout />
-      {/* <LoaderScreen /> */}
     </>
   );
 }
