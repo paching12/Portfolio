@@ -9,7 +9,7 @@ export const LANGUAGES = {
   // ES_MX: languageNames.espanolMx,
   en: languageNames.english,
   es: languageNames.espanol,
-  // pt: languageNames.portugese,
+  pt: languageNames.portugese,
   // PT_BR: languageNames.portugese,
   // EN: languageNames.english, // alias
 } as const;

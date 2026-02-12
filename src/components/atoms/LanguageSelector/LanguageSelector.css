@@ -1,0 +1,6 @@
+@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
+
+.dropdown-content {
+  @apply flex cursor-pointer justify-center;
+  color: var(--color-foreground);
+}

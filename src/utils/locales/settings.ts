@@ -5,7 +5,7 @@ export const languageNames = {
   // englishNZ: "en-nz",
   // espanolMx: "es-mx",
   espanol: "es",
-  // portugese: "pt",
+  portugese: "pt",
 } as const;
 
 export type LANGUAGES = (typeof languageNames)[keyof typeof languageNames];
