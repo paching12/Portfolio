@@ -1,17 +1,15 @@
-import { MenuItem } from "@components/atoms/MenuItem";
 import type { NavProps } from "./Nav.types";
-import type { FC } from "react";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { memo, type FC } from "react";
+import { LanguageSelector } from "../LanguageSelector";
+import MenuItemsList from "@components/molecules/MenuItemList/MenuItemList";
 
 const Nav: FC<NavProps> = ({ items }) => {
   return (
     <div className="flex">
-      {items.map((item) => (
-        <MenuItem item={item.i18nKey || ""} key={item.id} />
-      ))}
+      <MenuItemsList items={items} />
       <LanguageSelector />
     </div>
   );
 };
 
-export default Nav;
+export default memo(Nav);
