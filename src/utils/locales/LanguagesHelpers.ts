@@ -14,12 +14,18 @@ export const getNewLanguageList = (
 export const isValidLanguage = (value: string): value is LANGUAGE_TYPES =>
   Object.values(LANGUAGES).includes(value as LANGUAGE_TYPES);
 
-const languageFallbacks: Record<string, LANGUAGE_TYPES> = {
-  en: LANGUAGES.en,
-  es: LANGUAGES.es,
-  pt: LANGUAGES.pt,
-};
-
+const languageFallbacks: Record<string, LANGUAGE_TYPES> = Object.values(
+  LANGUAGES,
+).reduce(
+  (acc, lang) => {
+    const [baseCode] = lang.split("-");
+    if (!acc[baseCode]) {
+      acc[baseCode] = lang as LANGUAGE_TYPES;
+    }
+    return acc;
+  },
+  {} as Record<string, LANGUAGE_TYPES>,
+);
 export const normalizeLanguage = (value: string): LANGUAGE_TYPES => {
   const normalized = value.trim().toLowerCase().replace("_", "-");
 
