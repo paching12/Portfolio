@@ -27,6 +27,6 @@ export const normalizeLanguage = (value: string): LANGUAGE_TYPES => {
     return normalized;
   }
 
-  const [baseCode, _] = normalized.split("-");
+  const [baseCode] = normalized.split("-");
   return languageFallbacks[baseCode] ?? LANGUAGES.en;
 };

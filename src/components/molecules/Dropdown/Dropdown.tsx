@@ -40,7 +40,8 @@ const Dropdown = <Type extends string | number | boolean>({
             "rounded-lg": !dropdownActive && rounded,
             "rounded-t-lg": dropdownActive && rounded,
           },
-          `pl-3 ${style}`,
+          style,
+          "pl-3",
         )}
       >
         <span className="flex justify-center whitespace-nowrap">
@@ -48,7 +49,7 @@ const Dropdown = <Type extends string | number | boolean>({
         </span>
       </Button>
 
-      {options?.length !== undefined && (
+      {options?.length > 0 && (
         <ul
           className={classNames(
             {
