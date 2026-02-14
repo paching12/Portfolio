@@ -60,6 +60,7 @@ const Dropdown = <Type extends string | number | boolean>({
           )}
           style={buttonWidth ? { width: buttonWidth } : undefined}
         >
+          {/* TODO keyboard feature */}
           {options.map((item, index: number) => (
             <li
               className={classNames(
