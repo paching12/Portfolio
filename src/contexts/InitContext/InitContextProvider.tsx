@@ -9,7 +9,10 @@ import {
 } from "@reducers/languageReducer/languageReducer";
 import { ActionPayloadTypes } from "@actions/languages";
 import { type LANGUAGE_TYPES } from "@shared/types/Languages";
-import { getNewLanguageList } from "@utils/locales/LanguagesHelpers";
+import {
+  getNewLanguageList,
+  normalizeLanguage,
+} from "@utils/locales/LanguagesHelpers";
 import { languageNames } from "@utils/locales/settings";
 export const InitContextProvider: FC<InitContextProviderType> = ({
   children,
@@ -17,7 +20,7 @@ export const InitContextProvider: FC<InitContextProviderType> = ({
   const [theme, setTheme] = useState<THEME_TYPE>(THEMES.DARK);
   const { i18n } = useTranslation(); // not passing any namespace will use the defaultNS (by default set to 'translation')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [selectedLanguagei18n] = i18n.language.split("-");
+  const selectedLanguagei18n = i18n.language;
   const [{ currentLanguage }, dispatch] = useReducer(
     LanguageReducer,
     initialState,
@@ -37,7 +40,7 @@ export const InitContextProvider: FC<InitContextProviderType> = ({
   };
 
   useEffect(() => {
-    setCurrentLanguage(selectedLanguagei18n as LANGUAGE_TYPES);
+    setCurrentLanguage(normalizeLanguage(selectedLanguagei18n));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
