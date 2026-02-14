@@ -21,7 +21,8 @@ const LanguageSelector = () => {
   );
 
   const renderItemFunction = (item: LANGUAGE_TYPES, index = 0) => {
-    const [language, location = language] = item.split("-");
+    const [language, region] = item.split("-");
+    const location = (region || "un").toLowerCase();
     return (
       <div
         className={classNames(
@@ -35,6 +36,7 @@ const LanguageSelector = () => {
           <span
             className={`fi fi-${location} fis flag-circle rounded-full`}
             aria-hidden="true"
+            // TODO: Consider adding an aria-label to the Dropdown button that provides more context, such as "Select language: English (US)"
           ></span>
         </div>
         <div className="flex flex-1 content-center items-center justify-center">

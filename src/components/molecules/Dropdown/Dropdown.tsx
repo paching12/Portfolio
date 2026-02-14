@@ -49,7 +49,7 @@ const Dropdown = <Type extends string | number | boolean>({
         </span>
       </Button>
 
-      {options?.length > 0 && (
+      {options.length > 0 && (
         <ul
           className={classNames(
             {
