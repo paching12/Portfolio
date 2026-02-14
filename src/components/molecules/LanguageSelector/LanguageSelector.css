@@ -8,3 +8,31 @@
 .language-container {
   @apply flex-1 list-none content-center justify-center p-2 select-none;
 }
+
+.dropdown-line {
+  @apply relative;
+}
+
+.dropdown-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 85%;
+  transform: translateX(-50%);
+  border-top: 1px solid var(--color-text-muted);
+}
+
+.flag-circle.flag-circle.fi {
+  width: 26px !important;
+  height: 26px !important;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  @apply border;
+}
+
+.language-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}

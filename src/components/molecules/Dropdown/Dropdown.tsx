@@ -8,6 +8,8 @@ const Dropdown = <Type extends string | number | boolean>({
   onChange,
   options = [],
   value,
+  style,
+  renderItems,
 }: DropdownProps<Type>) => {
   const [dropdownActive, setDropdownActive] = useState<boolean>(false);
   const [buttonWidth, setButtonWidth] = useState<number | undefined>(undefined);
@@ -38,43 +40,53 @@ const Dropdown = <Type extends string | number | boolean>({
             "rounded-lg": !dropdownActive && rounded,
             "rounded-t-lg": dropdownActive && rounded,
           },
+          style,
           "pl-3",
         )}
       >
-        <span className="whitespace-nowrap"> {value} ▼</span>
+        <span className="flex justify-center whitespace-nowrap">
+          {renderItems ? renderItems(value) : value}
+        </span>
       </Button>
 
-      <ul
-        className={classNames(
-          {
-            hidden: !dropdownActive,
-            "rounded-b-lg": rounded,
-          },
-          "absolute backdrop-blur-3xl",
-        )}
-        style={buttonWidth ? { width: buttonWidth } : undefined}
-      >
-        {options.map((item, index: number) => (
-          <li
-            className={classNames(
-              {
-                "rounded-b-lg": index + 1 === options.length && rounded,
-              },
-              "dropdown-content",
-            )}
-            key={`DropdownItem-${String(item)}`}
-            onClick={() => selectHandler(item)}
-          >
-            <span
-              className={classNames({
-                "border-t-text-muted border-t px-2": index,
-              })}
+      {options.length > 0 && (
+        <ul
+          className={classNames(
+            {
+              hidden: !dropdownActive,
+              "rounded-b-lg": rounded,
+            },
+            "absolute backdrop-blur-3xl",
+          )}
+          style={buttonWidth ? { width: buttonWidth } : undefined}
+        >
+          {/* TODO keyboard feature */}
+          {options.map((item, index: number) => (
+            <li
+              className={classNames(
+                {
+                  "rounded-b-lg": index + 1 === options.length && rounded,
+                },
+                "dropdown-content",
+              )}
+              key={`DropdownItem-${String(item)}`}
+              onClick={() => selectHandler(item)}
             >
-              {item}
-            </span>
-          </li>
-        ))}
-      </ul>
+              {renderItems ? (
+                renderItems(item, index)
+              ) : (
+                <span
+                  className={classNames({
+                    "border-t-text-muted border-t": index,
+                  })}
+                >
+                  {item}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
