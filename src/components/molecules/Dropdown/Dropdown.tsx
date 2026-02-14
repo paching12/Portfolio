@@ -43,7 +43,7 @@ const Dropdown = <Type extends string | number | boolean>({
           `pl-3 ${style}`,
         )}
       >
-        <span className="flex whitespace-nowrap">
+        <span className="flex justify-center whitespace-nowrap">
           {renderItems ? renderItems(value) : value}
         </span>
       </Button>
@@ -61,10 +61,12 @@ const Dropdown = <Type extends string | number | boolean>({
         >
           {options.map((item, index: number) => (
             <li
-              className={classNames({
-                "rounded-b-lg": index + 1 === options.length && rounded,
-                "dropdown-content": renderItems,
-              })}
+              className={classNames(
+                {
+                  "rounded-b-lg": index + 1 === options.length && rounded,
+                },
+                "dropdown-content",
+              )}
               key={`DropdownItem-${String(item)}`}
               onClick={() => selectHandler(item)}
             >
