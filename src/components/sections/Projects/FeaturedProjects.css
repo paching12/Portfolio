@@ -3,3 +3,7 @@
 .section-featured-projects {
   @apply flex flex-col pt-5 text-white lg:pt-8;
 }
+
+.section-title {
+  @apply pb-3;
+}
