@@ -7,6 +7,13 @@ export default {
         skills: "Habilidades",
         aboutMe: "Sobre mi",
       },
+      Heroe: {
+        title: "Desarrollador Fullstack",
+        description:
+          "Construyendo soluciones web confiables en React,\n .NET & herramientas cloud-native.",
+        viewProjectsButton: "Ver proyectos",
+        downloadCv: "Descargar CV",
+      },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
       //   "product.onlyOneLeft": "Only 1 item left!",

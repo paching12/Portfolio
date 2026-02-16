@@ -7,6 +7,13 @@ export default {
         skills: "Skills",
         aboutMe: "About me",
       },
+      Heroe: {
+        title: "Fullstack Developer",
+        description:
+          "Building reliable web systems with React,\n .NET & cloud-native tools",
+        viewProjectsButton: "View Projects",
+        downloadCv: "Download resumé",
+      },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
       //   "product.onlyOneLeft": "Only 1 item left!",
