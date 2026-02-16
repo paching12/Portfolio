@@ -1,6 +1,7 @@
 export const BUTTON_STYLES = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
+  TERTIARY: "tertiary",
 };
 
 export type ButtonProps = {

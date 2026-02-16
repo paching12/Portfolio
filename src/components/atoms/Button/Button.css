@@ -16,8 +16,33 @@
 }
 
 .btn-secondary {
+  background: linear-gradient(180deg, #132f42 0%, #0f2a3a 100%);
+  color: #cfefff;
+  border: 1px solid #2ea3ff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0 12px rgba(46, 163, 255, 0.6);
+  background: linear-gradient(180deg, #173a52 0%, #123247 100%);
+}
+
+.btn-tertiary {
   background-color: transparent;
-  border: 1px solid #f5f5f5;
-  color: #f5f5f5;
-  backdrop-filter: blur(4px); /* Efecto cristal */
+  color: #a8b3c2;
+  border: 1px solid #2a3442;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-tertiary:hover {
+  background-color: #222c3a;
+  border-color: #354255;
+  color: #c5d1e0;
 }
