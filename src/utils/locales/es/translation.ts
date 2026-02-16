@@ -14,6 +14,9 @@ export default {
         viewProjectsButton: "Ver proyectos",
         downloadCv: "Descargar CV",
       },
+      Projects: {
+        title: "Proyectos Destacados",
+      },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
       //   "product.onlyOneLeft": "Only 1 item left!",

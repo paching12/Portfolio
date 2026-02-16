@@ -16,6 +16,32 @@ body {
   background-color: var(--color-background);
 }
 
+.section-title {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 2rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-left: 1rem;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(100, 180, 255, 1),
+    rgba(100, 180, 255, 0)
+  );
+}
+
+.section {
+  @apply border-b-1;
+  border-color: rgba(138, 141, 145, 0.2);
+}
+
 @theme {
   --color-primary: #02f2ff;
   --color-secondary: #f5f5f5;

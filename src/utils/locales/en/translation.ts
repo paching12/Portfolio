@@ -14,6 +14,9 @@ export default {
         viewProjectsButton: "View Projects",
         downloadCv: "Download resumé",
       },
+      Projects: {
+        title: "Featured Projects",
+      },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
       //   "product.onlyOneLeft": "Only 1 item left!",
