@@ -4,11 +4,11 @@ import { Card } from "../Card";
 const Carousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const items = Array.from({ length: 12 });
-  // Creamos 3 sets de items para el efecto infinito
+  // Create 3 sets to generate infinite scroll
   const infiniteItems = [...items, ...items, ...items];
 
   useEffect(() => {
-    // Posicionar el scroll en el set del medio al inicio
+    // Position the scroll in the middle set at the start
     if (containerRef.current) {
       const scrollWidth = containerRef.current.scrollWidth;
       const oneSetWidth = scrollWidth / 3;
@@ -21,11 +21,11 @@ const Carousel = () => {
       const { scrollLeft, scrollWidth } = containerRef.current;
       const oneSetWidth = scrollWidth / 3;
 
-      // Si llegamos al inicio (Set 1), saltamos al inicio del Set 2
+      // If we reach the start (Set 1), jump to the start of Set 2
       if (scrollLeft <= 10) {
         containerRef.current.scrollLeft = oneSetWidth + scrollLeft;
       }
-      // Si llegamos al final del Set 2 (entrando al Set 3), saltamos al inicio del Set 2
+      // If we reach the end of Set 2 (entering Set 3), jump to the start of Set 2
       else if (scrollLeft >= 2 * oneSetWidth - 10) {
         containerRef.current.scrollLeft = scrollLeft - oneSetWidth;
       }
