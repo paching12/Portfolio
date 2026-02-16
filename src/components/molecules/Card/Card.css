@@ -1,0 +1,9 @@
+@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
+
+.image-content {
+  @apply w-xs;
+}
+
+.Card {
+  @apply border-text-muted flex w-xs flex-col justify-center gap-3.5 overflow-hidden rounded-2xl border pb-3.5;
+}

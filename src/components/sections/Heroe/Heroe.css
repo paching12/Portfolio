@@ -1,6 +1,6 @@
 @reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
 .heroe-container {
-  @apply flex justify-center gap-10 text-white lg:gap-16 lg:pb-12;
+  @apply flex justify-center gap-10 text-white lg:gap-16;
 }
 
 .header-title {
