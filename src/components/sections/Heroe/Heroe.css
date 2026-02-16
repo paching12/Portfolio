@@ -1,0 +1,13 @@
+@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
+.heroe-container {
+  @apply flex justify-center gap-10 border-b-1 text-white lg:gap-16 lg:pb-12;
+  border-color: rgba(138, 141, 145, 0.2);
+}
+
+.header-title {
+  @apply mt-3 flex-col text-xl md:text-4xl lg:text-5xl xl:mt-1;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
