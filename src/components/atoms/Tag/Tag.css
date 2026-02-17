@@ -1,0 +1,5 @@
+@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
+
+.tag-chip {
+  @apply inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium whitespace-nowrap text-white backdrop-blur-sm transition-colors hover:bg-white/20;
+}

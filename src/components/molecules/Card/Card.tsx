@@ -4,6 +4,7 @@ import { BUTTON_STYLES } from "@components/atoms/Button/Button.types";
 import image from "./../../../assets/reactquizz.png";
 import "./Card.css";
 import type { CardProps } from "./Card.types";
+import { TagsCarousel } from "@components/molecules/TagsCarousel";
 
 const Card: FC<CardProps> = ({
   title = "React Quiz",
@@ -11,6 +12,7 @@ const Card: FC<CardProps> = ({
   buttonTitle = "View Project",
   thumbnails,
   link,
+  tags,
 }) => {
   const openLink = () =>
     window.open(
@@ -30,6 +32,7 @@ const Card: FC<CardProps> = ({
         <div className="flex flex-col gap-2 px-5">
           <h4 className="text-xl font-semibold">{title}</h4>
           <span className="text-text-muted text-sm">{description}</span>
+          {tags && <TagsCarousel tags={tags} />}
         </div>
       </div>
       <div className="px-5 pb-2">

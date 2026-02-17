@@ -4,4 +4,5 @@ export type CardProps = {
   buttonTitle: string;
   thumbnails?: string;
   link?: string;
+  tags?: string[];
 };
