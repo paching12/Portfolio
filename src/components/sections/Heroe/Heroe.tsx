@@ -16,12 +16,19 @@ const Heroe = () => {
         </p>
         <div className="flex gap-4">
           <Button
-            onClick={() => console.log("move down")}
+            onClick={() => {
+              const projectsSection = document.getElementById("projects");
+              if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             variant={BUTTON_STYLES.SECONDARY}
           >
             {t("Heroe.viewProjectsButton")}
           </Button>
-          <Button onClick={() => {}} variant={BUTTON_STYLES.TERTIARY}>
+          <Button onClick={() => {
+            window.open("https://drive.google.com/file/d/1_0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0/view?usp=sharing", "_blank");
+          }} variant={BUTTON_STYLES.TERTIARY}>
             {t("Heroe.downloadCv")}
           </Button>
         </div>
