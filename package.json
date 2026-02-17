@@ -2,7 +2,7 @@
   "name": "personal-portafolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://YOUR_USER.github.io/portfolio",
+  "homepage": "https://paching12.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
