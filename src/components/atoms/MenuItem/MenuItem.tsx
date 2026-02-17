@@ -4,9 +4,13 @@ import { useTranslation } from "react-i18next";
 
 import "./MenuItem.css";
 
-const MenuItem: FC<MenuItemProps> = ({ item }) => {
+const MenuItem: FC<MenuItemProps> = ({ item, href }) => {
   const { t } = useTranslation();
-  return <li className="menuItem">{t(item)}</li>;
+  return (
+    <li className="menuItem">
+      <a href={href}>{t(item)}</a>
+    </li>
+  );
 };
 
 export default MenuItem;

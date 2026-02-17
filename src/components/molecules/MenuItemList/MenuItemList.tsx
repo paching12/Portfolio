@@ -6,7 +6,7 @@ const MenuItemsList: FC<MenuItemsListProps> = memo(({ items }) => {
   return (
     <>
       {items.map((item) => (
-        <MenuItem item={item.i18nKey || ""} key={item.id} />
+        <MenuItem item={item.i18nKey || ""} href={item.href} key={item.id} />
       ))}
     </>
   );

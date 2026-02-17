@@ -1,4 +1,4 @@
-@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
+@reference "./../../../index.css"; 
 
 .image-content {
   @apply h-48 w-full object-cover md:w-xs;

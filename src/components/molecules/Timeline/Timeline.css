@@ -1,0 +1,120 @@
+@reference "./../../../index.css"; 
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    --color-cyan: #00d8ff;
+    --color-purple: #9b59b6;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+}
+
+.timeline-item.last {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+    position: relative;
+    min-width: 20px; /* Align with dots */
+}
+
+/* The Glowing Dot */
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.dot-cyan {
+    background: var(--color-cyan);
+    box-shadow: 0 0 10px var(--color-cyan), 0 0 20px rgba(0, 216, 255, 0.5);
+}
+
+.dot-purple {
+    background: var(--color-purple);
+    box-shadow: 0 0 10px var(--color-purple), 0 0 20px rgba(155, 89, 182, 0.5);
+}
+
+/* Gradient vertical line */
+.timeline-line {
+    position: absolute;
+    top: 16px; /* Start right below the dot */
+    bottom: -16px; /* Extend to next dot */
+    width: 2px;
+    /* Background is set via inline style for gradient */
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    color: #e2e8f0; /* Default text color */
+    padding-bottom: 3rem; /* Space between items, moved here to let marker stretch */
+}
+
+/* Remove padding from the last item to avoid extra space at the bottom */
+.timeline-item.last .timeline-content {
+    padding-bottom: 0;
+}
+
+.timeline-date {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #f8fafc;
+}
+
+.timeline-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin: 0 0 1rem 0;
+}
+
+.timeline-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0;
+    white-space: pre-line; /* Handle newlines in description */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .timeline-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .timeline-marker {
+        margin-right: 1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.25rem;
+    }
+    
+    .timeline-subtitle {
+        font-size: 1.1rem;
+    }
+}

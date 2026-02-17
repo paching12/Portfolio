@@ -6,15 +6,16 @@ export const HeaderOptions: NavItemConfig[] = [
     i18nKey: "Header.heroe",
     href: "#home",
   },
+  
   {
     id: 2,
-    i18nKey: "Header.experience",
-    href: "#experience",
+    i18nKey: "Header.projects",
+    href: "#projects",
   },
   {
     id: 3,
-    i18nKey: "Header.skills",
-    href: "#skills",
+    i18nKey: "Header.experience",
+    href: "#experience",
   },
   {
     id: 4,

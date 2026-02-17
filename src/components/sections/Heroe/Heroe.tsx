@@ -7,7 +7,7 @@ import { BUTTON_STYLES } from "@components/atoms/Button/Button.types";
 const Heroe = () => {
   const { t } = useTranslation();
   return (
-    <section className="heroe-container montserrat-semi-bold section">
+    <section className="heroe-container montserrat-semi-bold section" id="home">
       <img src={Logo} alt="Your SVG" className="w-20 md:w-27 lg:w-sm" />
       <div className="flex flex-col justify-around">
         <h1 className="header-title">{t("Heroe.title")}</h1>
