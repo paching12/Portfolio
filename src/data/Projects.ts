@@ -1,6 +1,8 @@
 import type { Project } from "@shared/types/Project";
 import reactQuizz from "./../assets/reactquizz.png";
 import EVMS from "./../assets/EVMS.png";
+import worldwise from "./../assets/worldwise.png";
+import todoapp from "./../assets/todoapp.png";
 
 export const projects: Project[] = [
   {
@@ -17,13 +19,22 @@ export const projects: Project[] = [
     description: "Projects.reactQuizzDescription",
     image: reactQuizz,
     link: "https://paching12.github.io/ReactQuiz/",
-    tags: ["React", "Redux", "TypeScript", "JavaScript", "HTML 5", "CSS 3", "Hooks", "Context API", "Reducers", "Localstorage"],
+    tags: ["React", "Mobile/Computer", "TypeScript", "JavaScript", "HTML 5", "CSS 3", "Hooks", "Context API", "Reducers", "Localstorage"],
   },
   {
     id: 3,
-    title: "Projects.reactQuizz",
-    description: "Projects.reactQuizzDescription",
-    image: reactQuizz,
-    link: "",
+    title: "Projects.worldwise",
+    description: "Projects.worldwiseDescription",
+    image: worldwise,
+    link: "https://paching12.github.io/worldwise/",
+    tags: [ "Leaflet", "Computer platform", "React router", "Redux", "TypeScript", "React Datepicker", "Flag Icons" ],
   },
+  {
+    id: 4,
+    title: "Projects.todoapp",
+    description: "Projects.todoappDescription",
+    image: todoapp,
+    link: "https://paching12.github.io/platzi-todo-app/",
+    tags: [ "React", "JavaScript", "React Render Patterns", "HOCS", "Hooks", "Context API", "Reducers", "LocalStorage" ],
+  }
 ];

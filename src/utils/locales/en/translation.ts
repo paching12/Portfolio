@@ -18,12 +18,23 @@ export default {
         title: "Featured Projects",
         // React Quizz
         reactQuizz: "React Quizz",
-        reactQuizzDescription: "Interactive quiz platform to assess knowledge in React and Redux.",
+        reactQuizzDescription:
+          "Interactive quiz platform to assess knowledge in React and Redux.",
         viewProject: "View Project",
         // EVMS
         EVMS: "Embedded Vital Monitoring System",
-        EVMSDescription: "LTE-enabled embedded system for remote vital signs monitoring.",
+        EVMSDescription:
+          "LTE-enabled embedded system for remote vital signs monitoring.",
         EVMSButton: "View Project",
+        // Worldwise
+        worldwise: "Worldwise",
+        worldwiseDescription:
+          "A world map that tracks your footsteps into every city you can think of.",
+        worldwiseButton: "View Project",
+        // TODO APP
+        todoapp: "ToDo App",
+        todoappDescription: "An app to track your pending tasks.",
+        todoappButton: "View Project",
       },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",

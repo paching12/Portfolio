@@ -12,7 +12,7 @@ const Carousel = <T,>({items, renderItem}: CarouselProps<T>) => {
     // Position the scroll in the middle set at the start
     if (containerRef.current) {
       const scrollWidth = containerRef.current.scrollWidth;
-      const oneSetWidth = scrollWidth / 10;
+      const oneSetWidth = scrollWidth / 3;
       containerRef.current.scrollLeft = oneSetWidth;
     }
   }, []);

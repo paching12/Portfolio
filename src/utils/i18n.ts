@@ -3,11 +3,13 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import enTranslations from "./locales/en/translation";
 import esTranslations from "./locales/es/translation";
+import ptTranslations from "./locales/pt/translation";
 import { languageNames } from "./locales/settings";
 
 const resources = {
   ...enTranslations,
   ...esTranslations,
+  ...ptTranslations,
 };
 
 // Initialize i18next
@@ -19,9 +21,7 @@ i18n
     fallbackLng: {
       es: [languageNames.espanol, languageNames.english],
       en: [languageNames.english],
-      "en-za": [languageNames.english],
-      "es-co": [languageNames.espanol, languageNames.english],
-      "es-ar": [languageNames.espanol, languageNames.english],
+      pt: [languageNames.portuguese, languageNames.english],
       default: [languageNames.english],
     }, // Default language if detection fails
     cleanCode: true,

@@ -24,20 +24,16 @@ export default {
         EVMS: "Sistema de Monitoreo de Signos Vitales Embebido",
         EVMSDescription: "Sistema embebido con capacidad LTE para el monitoreo remoto de signos vitales.",
         EVMSButton: "Ver Proyecto",
-
+        // Worldwise
+        worldwise: "Worldwise",
+        worldwiseDescription:
+          "Un mapa del mundo que rastrea tus pasos en cada ciudad que puedas imaginar.",
+        worldwiseButton: "Ver Proyecto",
+        // TODO APP
+        todoapp: "ToDo App",
+        todoappDescription: "Una aplicación para gestionar tus tareas pendientes.",
+        todoappButton: "Ver Proyecto",
       },
-      //   "product.inStock": "In stock: {{count}} items",
-      //   "product.outOfStock": "Out of stock",
-      //   "product.onlyOneLeft": "Only 1 item left!",
-      //   "product.addToCart": "Add to cart",
-
-      //   "profile.welcome": "Welcome, {{name}}!",
-      //   "profile.memberSince": "Member since: {{date}}",
-      //   "profile.loyaltyPoints": "You have {{points}} loyalty points",
-      //   "profile.orders_zero": "You have no orders",
-      //   "profile.orders_one": "You have 1 order",
-      //   "profile.orders_other": "You have {{count}} orders",
-      //   "profile.editProfile": "Edit profile",
     },
   },
 };
