@@ -5,4 +5,5 @@ export interface DropdownProps<Type> {
   value: Type;
   renderItems?: (Item: Type, index?: number) => React.ReactNode;
   style?: string;
+  align?: "left" | "right";
 }

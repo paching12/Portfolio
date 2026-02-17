@@ -9,7 +9,7 @@ const Heroe = () => {
   return (
     <section className="heroe-container montserrat-semi-bold section lg:pt-32 min-h-[80vh] items-center" id="home">
       <img src={Logo} alt="Your SVG" className="w-20 md:w-27 lg:w-sm" />
-      <div className="flex flex-col justify-around">
+      <div className="flex flex-col justify-around gap-5">
         <h1 className="header-title">{t("Heroe.title")}</h1>
         <p className="text-text-muted text-lg whitespace-pre-line">
           {t("Heroe.description")}

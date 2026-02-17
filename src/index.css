@@ -77,3 +77,12 @@ body {
 
   --shadow-neon: 0 0 15px rgba(2, 242, 255, 0.4);
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

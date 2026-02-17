@@ -9,9 +9,11 @@ const Nav: FC<NavProps> = ({ items }) => {
   const activeId = useActiveSection(sectionIds);
 
   return (
-    <nav className="flex w-full items-center gap-4 overflow-x-auto lg:overflow-visible pb-1 lg:pb-0 px-2 lg:px-0 pr-4 lg:pr-0 justify-center lg:justify-end">
-      <MenuItemsList items={items} activeId={activeId} />
-      <LanguageSelector />
+    <nav className="w-full overflow-x-auto lg:overflow-visible pb-1 lg:pb-0 no-scrollbar">
+      <div className="flex items-center gap-4 mx-auto w-max px-2 lg:px-0 pr-4 lg:pr-0">
+        <MenuItemsList items={items} activeId={activeId} />
+        <LanguageSelector />
+      </div>
     </nav>
   );
 };
