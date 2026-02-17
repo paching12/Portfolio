@@ -47,7 +47,7 @@ const LanguageSelector = () => {
   };
 
   return (
-    <li className="language-container">
+    <div className="language-container shrink-0">
       <Dropdown
         value={currentLanguage as LANGUAGE_TYPES}
         onChange={selectLanguageHandler}
@@ -56,7 +56,7 @@ const LanguageSelector = () => {
         style="w-20"
         renderItems={renderItemFunction}
       />
-    </li>
+    </div>
   );
 };
 
