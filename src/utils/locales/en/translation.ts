@@ -36,6 +36,9 @@ export default {
         todoappDescription: "An app to track your pending tasks.",
         todoappButton: "View Project",
       },
+      Experience: {
+        title: "Experience",
+      },  
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
       //   "product.onlyOneLeft": "Only 1 item left!",

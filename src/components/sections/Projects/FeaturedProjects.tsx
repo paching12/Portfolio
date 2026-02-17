@@ -7,7 +7,7 @@ import Card from "@components/molecules/Card/Card";
 const FeaturedProjects = () => {
   const { t } = useTranslation();
   return (
-    <div className="section section-featured-projects">
+    <section className="section section-featured-projects">
       <h3 className="section-title">{t("Projects.title")}</h3>
       <Carousel
         items={projects}
@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
           />
         )}
       />
-    </div>
+    </section>
   );
 };
 

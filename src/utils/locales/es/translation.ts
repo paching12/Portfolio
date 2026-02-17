@@ -34,6 +34,9 @@ export default {
         todoappDescription: "Una aplicación para gestionar tus tareas pendientes.",
         todoappButton: "Ver Proyecto",
       },
+      Experience: {
+        title: "Experiencia",
+      },
     },
   },
 };
