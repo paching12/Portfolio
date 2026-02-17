@@ -43,7 +43,7 @@ body {
 }
 
 .section {
-  @apply border-b-1 pb-12;
+  @apply border-b-1 pb-12 pl-5;
   border-color: rgba(138, 141, 145, 0.2);
 }
 
