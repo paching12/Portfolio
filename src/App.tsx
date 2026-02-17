@@ -1,41 +1,14 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import Loader from "./components/atoms/Loader/Loader";
 import AppLayout from "./layouts/AppLayout";
 import { projects } from "@data/Projects";
 import Logo from "@assets/JJPD_optimized.svg";
+import { usePreloader } from "@hooks/usePreloader";
+
+const imageUrls = [Logo, ...projects.map((p) => p.image).filter(Boolean)];
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const imageUrls = [Logo, ...projects.map((p) => p.image).filter(Boolean)];
-
-    const preloadImages = async () => {
-      const promises = imageUrls.map((src) => {
-        return new Promise((resolve) => {
-          if (!src) return resolve(true);
-          const img = new Image();
-          img.src = src;
-          img.onload = () => resolve(true);
-          img.onerror = () => resolve(false);
-        });
-      });
-
-      const onWindowLoad = new Promise((resolve) => {
-        if (document.readyState === "complete") {
-          resolve(true);
-        } else {
-          window.addEventListener("load", () => resolve(true));
-        }
-      });
-
-      await Promise.all([Promise.all(promises), onWindowLoad]);
-      setIsLoading(false);
-    };
-
-    preloadImages();
-  }, []);
+  const isLoading = usePreloader(imageUrls);
 
   return (
     <>
