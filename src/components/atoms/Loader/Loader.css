@@ -1,23 +1,15 @@
-/* From Uiverse.io by jeremyssocial */
-@keyframes blinkCursor {
-  50% {
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typeAndDelete {
-  0%,
-  10% {
-    width: 0;
-  }
-  45%,
-  55% {
-    width: 6.2em;
-  } /* adjust width based on content */
-  90%,
-  100% {
-    width: 0;
-  }
+/* From Uiverse.io by gharsh11032000 */ 
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03060d; /* Keep match with theme */
+  z-index: 9999;
 }
 
 .terminal-loader {
@@ -63,34 +55,36 @@
 
 .control.close {
   background-color: #e33;
-  user-select: none;
 }
 
 .control.minimize {
   background-color: #ee0;
-  user-select: none;
 }
 
 .control.maximize {
   background-color: #0b0;
-  user-select: none;
 }
 
 .terminal-title {
   float: left;
   line-height: 1.5em;
   color: #eee;
-  user-select: none;
 }
 
 .text {
-  user-select: none;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.2em solid green; /* Cursor */
-  animation:
-    typeAndDelete 4s steps(11) infinite,
-    blinkCursor 0.5s step-end infinite alternate;
-  margin-top: 1.5em;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: green }
 }
