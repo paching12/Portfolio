@@ -1,4 +1,3 @@
-import { Footer } from "@components/atoms/Footer";
 import { Header } from "@components/molecules/Header";
 import Nav from "@components/atoms/Nav/Nav";
 import { HeaderOptions } from "../data/NavItems";
@@ -18,7 +17,6 @@ const AppLayout = () => {
       <Heroe />
       <Projects />
       <Experience />
-      <Footer />
     </div>
   );
 };
