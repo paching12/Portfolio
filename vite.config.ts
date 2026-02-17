@@ -22,6 +22,7 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "./src/shared"),
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@actions": path.resolve(__dirname, "./src/actions"),
+      "@data": path.resolve(__dirname, "./src/data"),
     },
   },
 });
