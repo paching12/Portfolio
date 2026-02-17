@@ -12,7 +12,7 @@ export const experience: Experience[] = [
     name: 'Experience.escom.name',
     startedYear: 2016,
     endYear: 2020,
-    position: 'Experience.escom.postion',
+    position: 'Experience.escom.position',
     description: 'Experience.escom.description',
   },
   {

@@ -1,7 +1,7 @@
 @reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
 
 .section-featured-projects {
-  @apply flex flex-col pt-5 text-white lg:pt-8 container;
+  @apply flex flex-col pt-5 text-white lg:pt-10;
 }
 
 .section-title {
