@@ -21,16 +21,18 @@ const Card: FC<CardProps> = ({
 
   return (
     <div className="Card">
-      <img
-        className="image-content"
-        src={thumbnails || image}
-        alt="reactquizz"
-      />
-      <div>
-        <h4 className="pl-5 text-xl">{title}</h4>
+      <div className="flex flex-col gap-4">
+        <img
+          className="image-content"
+          src={thumbnails || image}
+          alt="reactquizz"
+        />
+        <div className="flex flex-col gap-2 px-5">
+          <h4 className="text-xl font-semibold">{title}</h4>
+          <span className="text-text-muted text-sm">{description}</span>
+        </div>
       </div>
-      <span className="text-text-muted pl-5">{description}</span>
-      <div className="pl-5">
+      <div className="px-5 pb-2">
         <Button onClick={openLink} variant={BUTTON_STYLES.TERTIARY}>
           {buttonTitle}
         </Button>

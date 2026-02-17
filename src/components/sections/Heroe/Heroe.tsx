@@ -22,7 +22,7 @@ const Heroe = () => {
             {t("Heroe.viewProjectsButton")}
           </Button>
           <Button onClick={() => {}} variant={BUTTON_STYLES.TERTIARY}>
-            <button>{t("Heroe.downloadCv")}</button>
+            {t("Heroe.downloadCv")}
           </Button>
         </div>
       </div>

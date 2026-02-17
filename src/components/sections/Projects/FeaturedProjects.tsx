@@ -1,15 +1,28 @@
 import { useTranslation } from "react-i18next";
 import "./FeaturedProjects.css";
-import { Card } from "@components/molecules/Card";
+import { Carousel } from "@components/molecules/Carousel";
+import { projects } from "@data/Projects";
+import Card from "@components/molecules/Card/Card";
 
 const FeaturedProjects = () => {
   const { t } = useTranslation();
   return (
     <div className="section section-featured-projects">
       <h3 className="section-title">{t("Projects.title")}</h3>
-      <div className="carousel">
-        <Card />
-      </div>
+      <Carousel
+        items={projects}
+        renderItem={(item) => (
+          <Card
+            key={item.id}
+            title={t(item.title)}
+            description={t(item.description)}
+            thumbnails={item.image}
+            buttonTitle={t("Projects.viewProject")}
+            link={item.link}
+            tags={item.tags}
+          />
+        )}
+      />
     </div>
   );
 };
