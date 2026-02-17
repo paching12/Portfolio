@@ -10,7 +10,7 @@ const Nav: FC<NavProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full">
+    <nav className="p-4 lg:px-12">
       <div className="flex items-center justify-between lg:justify-end container">
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-4">
@@ -54,7 +54,7 @@ const Nav: FC<NavProps> = ({ items }) => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-screen bg-[#03060d] border-b border-white/10 flex flex-col shadow-2xl z-50 pb-8">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-[#03060d] border-b border-white/10 flex flex-col shadow-2xl z-50 pb-8">
            <div className="w-full flex flex-col items-center gap-6 pt-6">
               <MenuItemsList 
                 items={items} 

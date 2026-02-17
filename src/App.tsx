@@ -12,8 +12,7 @@ function App() {
 
   return (
     <>
-      {isLoading && <LoaderScreen />}
-      <AppLayout />
+      {isLoading ? <LoaderScreen /> : <AppLayout />}
     </>
   );
 }

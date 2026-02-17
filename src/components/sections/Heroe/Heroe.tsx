@@ -7,8 +7,8 @@ import { BUTTON_STYLES } from "@components/atoms/Button/Button.types";
 const Heroe = () => {
   const { t } = useTranslation();
   return (
-    <section className="heroe-container montserrat-semi-bold section lg:pt-32 min-h-[80vh] items-center select-none" id="home">
-      <img src={Logo} alt="Your SVG" className="w-sm select-none" />
+    <section className="heroe-container montserrat-semi-bold section pt-32 min-h-[80vh] items-center select-none" id="home">
+      <img src={Logo} alt="Your SVG" className="w-full max-w-[250px] md:max-w-sm select-none" />
       <div className="flex flex-col justify-around gap-5 select-none">
         <h1 className="header-title">{t("Heroe.title")}</h1>
         <p className="text-text-muted text-lg whitespace-pre-line select-none">
