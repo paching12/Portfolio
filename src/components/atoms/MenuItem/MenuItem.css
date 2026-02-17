@@ -1,6 +1,26 @@
-@reference "./../../../index.css"; /* Ajusta la ruta a tu archivo CSS principal */
-
 .menuItem {
-  @apply flex-1 cursor-pointer list-none content-center justify-center p-2 whitespace-nowrap select-none;
-  color: var(--color-text-muted);
+  list-style: none;
+  margin: 0 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 0.6;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+
+.menuItem:hover {
+  opacity: 1;
+}
+
+.menuItem.active {
+  opacity: 1;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(2, 242, 255, 0.4);
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: inherit;
 }

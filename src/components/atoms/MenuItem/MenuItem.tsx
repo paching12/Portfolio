@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 
 import "./MenuItem.css";
 
-const MenuItem: FC<MenuItemProps> = ({ item, href }) => {
+const MenuItem: FC<MenuItemProps> = ({ item, href, isActive }) => {
   const { t } = useTranslation();
   return (
-    <li className="menuItem">
+    <li className={`menuItem ${isActive ? "active" : ""}`}>
       <a href={href}>{t(item)}</a>
     </li>
   );
