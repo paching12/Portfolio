@@ -69,6 +69,10 @@ export default {
           description: "Este proyecto representó un desafío integral, desde la comunicación en un entorno internacional hasta la resolución de problemas en arquitecturas complejas basadas en JavaScript. Analicé y optimicé estructuras de software aplicando patrones de diseño, y contribuí al mantenimiento de sistemas web utilizados por empresas globales.",
         },
       },
+      AboutMe: {
+        title: "Sobre mi",
+        description: "Soy un desarrollador de software curioso y proactivo al que le gusta trabajar con sistemas complejos y tecnologías modernas. Me apasiona la mejora continua, tanto en el ámbito técnico como personal.\n\nFuera del trabajo, dedico tiempo a estudiar nuevas tecnologías y algoritmos, buscando siempre profundizar en el conocimiento de la informática. También disfruto jugando fútbol, lo que me mantiene activo y refuerza valores como el trabajo en equipo y la resiliencia. Para mí, el crecimiento es un compromiso diario.",
+      },
     },
   },
 };

@@ -70,7 +70,11 @@ export default {
           position: "Software Developer",
           description: "This project represented a comprehensive challenge, from communication in an international environment to solving problems in complex JavaScript-based architectures. I analyzed and optimized software structures applying design patterns, and contributed to the maintenance of web systems used by global companies.",
         },
-      },  
+      },
+      AboutMe: {
+        title: "About Me",
+        description: "I am a curious and driven software developer who enjoys working with complex systems and modern technologies. I am passionate about continuous improvement, both technically and personally.\n\nOutside of work, I dedicate time to studying new technologies and algorithms, always looking for ways to deepen my understanding of computer science. I also enjoy playing soccer, which keeps me active and reinforces teamwork and resilience. For me, growth is a daily commitment.",
+      },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
       //   "product.onlyOneLeft": "Only 1 item left!",

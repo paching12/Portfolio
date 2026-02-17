@@ -68,7 +68,11 @@ export default {
           position: "Desenvolvedor de Software",
           description: "Este projeto representou um desafio abrangente, desde a comunicação em um ambiente internacional até a resolução de problemas em arquiteturas complexas baseadas em JavaScript. Analisei e otimizei estruturas de software aplicando padrões de design, e contribuí para a manutenção de sistemas web utilizados por empresas globais.",
         },
-      },  
+      }, 
+      AboutMe: {
+        title: "Sobre mim",
+        description: "Sou um desenvolvedor de software curioso e proativo que gosta de trabalhar com sistemas complexos e tecnologias modernas. Sou apaixonado por melhoria contínua, tanto no âmbito técnico quanto pessoal.\n\nFora do trabalho, dedico tempo a estudar novas tecnologias e algoritmos, sempre buscando aprofundar meu conhecimento em ciência da computação. Também gosto de jogar futebol, o que me mantém ativo e reforça valores como trabalho em equipe e resiliência. Para mim, o crescimento é um compromisso diário.",
+      },
     },
   },
 };
