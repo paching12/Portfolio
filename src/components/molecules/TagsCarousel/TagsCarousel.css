@@ -1,0 +1,18 @@
+@reference "./../../../index.css";
+
+.tags-carousel-container {
+  @apply relative w-full overflow-hidden;
+}
+
+.tags-nav-btn {
+  @apply absolute top-0 bottom-0 z-10 items-center justify-center px-1 transition-opacity group-hover:flex focus:outline-none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
