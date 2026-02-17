@@ -10,14 +10,16 @@ const AppLayout = () => {
   const navItems = useMemo(() => HeaderOptions, []);
 
   return (
-    <div className="container">
+    <>
       <Header>
         <Nav items={navItems} />
       </Header>
-      <Heroe />
-      <Projects />
-      <Experience />
-    </div>
+      <div className="container">
+        <Heroe />
+        <Projects />
+        <Experience />
+      </div>
+    </>
   );
 };
 
