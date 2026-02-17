@@ -1,22 +1,16 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import Loader from "./components/atoms/Loader/Loader";
-import AppLayout from "./layouts/AppLayout";
-import { projects } from "@data/Projects";
-import Logo from "@assets/JJPD_optimized.svg";
+import { useState, useEffect } from "react";
 
-function App() {
+export const usePreloader = (images: string[]) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const imageUrls = [Logo, ...projects.map((p) => p.image).filter(Boolean)];
-
     const preloadImages = async () => {
-      const promises = imageUrls.map((src) => {
+      const promises = images.map((src) => {
         return new Promise((resolve) => {
           if (!src) return resolve(true);
           const img = new Image();
           img.src = src;
+          // resolve when loaded or failed (to not block app)
           img.onload = () => resolve(true);
           img.onerror = () => resolve(false);
         });
@@ -30,19 +24,13 @@ function App() {
         }
       });
 
+      // Wait for both window load and image preloading
       await Promise.all([Promise.all(promises), onWindowLoad]);
       setIsLoading(false);
     };
 
     preloadImages();
-  }, []);
+  }, [images]); // Depend on images array
 
-  return (
-    <>
-      {isLoading && <Loader />}
-      <AppLayout />
-    </>
-  );
-}
-
-export default App;
+  return isLoading;
+};
