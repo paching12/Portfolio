@@ -16,6 +16,15 @@ export default {
       },
       Projects: {
         title: "Proyectos Destacados",
+        // React Quizz
+        reactQuizz: "React Quizz",
+        reactQuizzDescription: "Plataforma interactiva de cuestionario para evaluar el conocimiento en React y Redux.",
+        viewProject: "Ver Proyecto",
+        // EVMS
+        EVMS: "Sistema de Monitoreo de Signos Vitales Embebido",
+        EVMSDescription: "Sistema embebido con capacidad LTE para el monitoreo remoto de signos vitales.",
+        EVMSButton: "Ver Proyecto",
+
       },
       //   "product.inStock": "In stock: {{count}} items",
       //   "product.outOfStock": "Out of stock",
