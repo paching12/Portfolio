@@ -1,9 +1,9 @@
 import "./App.css";
-import Loader from "./components/atoms/Loader/Loader";
 import AppLayout from "./layouts/AppLayout";
 import { projects } from "@data/Projects";
 import Logo from "@assets/JJPD_optimized.svg";
 import { usePreloader } from "@hooks/usePreloader";
+import LoaderScreen from "@pages/LoaderScreen/LoaderScreen";
 
 const imageUrls = [Logo, ...projects.map((p) => p.image).filter(Boolean)];
 
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      {isLoading && <Loader />}
+      {isLoading && <LoaderScreen />}
       <AppLayout />
     </>
   );
