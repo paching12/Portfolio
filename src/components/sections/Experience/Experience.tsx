@@ -7,7 +7,6 @@ const Experience = () => {
     const { t } = useTranslation();
 
     const timelineItems = experience.map((item) => {
-        console.log(t(item.description))
         return {
             date: `${item.startedYear} - ${item.endYear}`,
             title: t(item.position),
@@ -15,8 +14,6 @@ const Experience = () => {
             description: t(item.description),
         };
     });
-
-    console.log(timelineItems);
 
     return (
         <section className="section section-experience" id="experience">
