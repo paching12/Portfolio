@@ -1,8 +1,8 @@
 import type { Project } from "@shared/types/Project";
-import reactQuizz from "./../assets/reactquizz.png";
-import EVMS from "./../assets/EVMS.png";
-import worldwise from "./../assets/worldwise.png";
-import todoapp from "./../assets/todoapp.png";
+import reactQuizz from "./../assets/reactquizz.webp";
+import EVMS from "./../assets/EVMS.webp";
+import worldwise from "./../assets/worldwise.webp";
+import todoapp from "./../assets/todoapp.webp";
 
 export const projects: Project[] = [
   {
