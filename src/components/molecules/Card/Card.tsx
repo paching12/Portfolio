@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import { Button } from "@components/atoms/Button";
 import { BUTTON_STYLES } from "@components/atoms/Button/Button.types";
-import image from "./../../../assets/reactquizz.png";
 import "./Card.css";
 import type { CardProps } from "./Card.types";
 import { TagsCarousel } from "@components/molecules/TagsCarousel";
@@ -26,7 +25,7 @@ const Card: FC<CardProps> = ({
       <div className="flex flex-col gap-4">
         <img
           className="image-content"
-          src={thumbnails || image}
+          src={thumbnails}
           alt="reactquizz"
         />
         <div className="flex flex-col gap-2 px-5">
