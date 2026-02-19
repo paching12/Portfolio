@@ -27,7 +27,7 @@ const Heroe = () => {
             {t("Heroe.viewProjectsButton")}
           </Button>
           <Button onClick={() => {
-            window.open("https://drive.google.com/file/d/1_0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0/view?usp=sharing", "_blank");
+            window.open("https://drive.google.com/file/d/1sBPp9--a98trhb4tyCmF6M14PjkqyYLt/view?usp=sharing", "_blank");
           }} variant={BUTTON_STYLES.TERTIARY}>
             {t("Heroe.downloadCv")}
           </Button>
